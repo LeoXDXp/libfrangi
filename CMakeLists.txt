@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 2.6)
 project(libfrangi)
 set(CMAKE_BUILD_TYPE Release)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
-	
+find_package( OpenCV REQUIRED )
+
 #compile
 add_library(frangi SHARED src/frangi.cpp)
 add_executable(frangi-bin example/main.cpp)
