@@ -33,7 +33,7 @@ Manual Building and installing
 2. `g++ -c -Wall -pedantic -fpic `pkg-config --cflags --libs opencv4` frangi.cpp`
 3. `gcc -shared -o libfrangi.so frangi.o`
 4. `cp libfrangi.so /usr/local/lib/`  (Remember to add /usr/local/lib/ to the LD_LIBRARY_PATH if neccesary)
-5. `g++ main.cpp -o main -Wall -pedantic -L/usr/local/lib/ -lfrangi  -I../src/ `pkg-config --cflags --libs opencv4` ` (if LD_LIBRARY_PATH includes /usr/local/lib/, you can delete the -L parameter)
+5. `g++ ../example/main.cpp -o main -Wall -pedantic -L/usr/local/lib/ -lfrangi  -I../src/ `pkg-config --cflags --libs opencv4` ` (if LD_LIBRARY_PATH includes /usr/local/lib/, you can delete the -L parameter)
 
 Requirements
 ------------
